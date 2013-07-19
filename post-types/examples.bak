@@ -1,0 +1,51 @@
+<?php
+/*
+*	Example Custom Post Type
+*	- Duplicate and rename (with php extension!)
+*	- 
+*/
+class ExamplesPostType extends PostType {
+	
+	/* The human-readable name for the custom post type */
+	var $plural = 'Examples';
+	var $singular = 'Example';
+	
+	/* A prefix for the content identifier which avoids any namespace collisions with other plugins */
+	var $prefix = 'rgk';
+	
+	/* 
+	 *	Define the default field types available to the post type (See: http://codex.wordpress.org/Post_Formats for more information)
+	 *		- title;
+	 *		- editor (content);
+	 *		- author;
+	 *		- thumbnail;
+	 *		- excerpt;
+	 *		- trackbacks;
+	 *		- custom-fields;
+	 *		- comments;
+	 *		- revisions;
+	 *		- post-formats (as of WordPress v3.1)
+	 *
+	 *	Default:
+	 *		- array('title','editor','excerpt')
+	**/
+	//var $supports = array('title','editor','thumbnail');
+	
+	/*
+	 *	Define the columns displayed in the aggregate view. May include custom fields.
+	 */
+	var $columns = array(
+		//$system_name => $column_header
+	);
+	
+	/*
+	 *	Custom text fields.
+	 *	Currently all custom fields are added to a singe '%Post Type% Details' metabox
+	 *	Extend the add_metaboxes function to alter this behaviour
+	 */
+	var $metafields = array(
+		//$system_name => $form_label
+	);
+	
+}
+?>
