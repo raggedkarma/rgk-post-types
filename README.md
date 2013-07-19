@@ -1,4 +1,4 @@
-rgk-post-types
+RGK Post Types
 ==============
 
-OO Post Type Classes for WordPress
+Object-Oriented Post Type Classes for WordPress
